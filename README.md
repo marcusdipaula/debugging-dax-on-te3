@@ -39,3 +39,4 @@ Esta seção contém links de recursos usados no treinamento, que não foram cit
 - https://dax.guide/
 - https://www.sqlbi.com/articles/fields-parameters-in-power-bi/
 - https://www.sqlbi.com/articles/debugging-dax-measures-in-power-bi/
+- https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure
