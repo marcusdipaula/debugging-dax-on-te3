@@ -1,0 +1,17 @@
+{
+  "type": "calculatedTableColumn",
+  "name": "Category",
+  "dataType": "string",
+  "isNameInferred": false,
+  "isDataTypeInferred": true,
+  "isHidden": true,
+  "sourceColumn": "[Value4]",
+  "lineageTag": "20840eae-6800-48a0-893f-0e9c2e88a4ca",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

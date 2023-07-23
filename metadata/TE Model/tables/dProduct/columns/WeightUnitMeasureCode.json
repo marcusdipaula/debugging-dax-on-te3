@@ -1,0 +1,13 @@
+{
+  "name": "WeightUnitMeasureCode",
+  "dataType": "string",
+  "sourceColumn": "WeightUnitMeasureCode",
+  "lineageTag": "8fb37e69-2db1-4989-bc83-a0fb44dcae84",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

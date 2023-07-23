@@ -1,0 +1,9 @@
+{
+  "name": "Today",
+  "expression": [
+    "",
+    "TODAY()"
+  ],
+  "formatString": "Short Date",
+  "lineageTag": "7b90634b-c16b-4bf1-b3b2-8f5c1f6a4b83"
+}

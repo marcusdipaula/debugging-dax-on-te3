@@ -1,0 +1,73 @@
+table _Calculations
+	lineageTag: e3d21d6e-5373-4d69-a8a4-b5b22ff0856f
+	ordinal: 8
+
+	partition _Calculations = Calculated
+		mode: Import
+		expression:=
+			
+			DATATABLE(
+			    "Dummy Column", STRING
+			    ,{
+			        {""}
+			    }
+			)
+
+	measure Sales =
+			
+			SUMX(
+			    'Internet Sales'
+			    ,[UnitPrice] * [OrderQuantity]
+			)
+		formatString:= \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 30d5e165-62ab-4057-a01f-c5df75d18eac
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Sales LY' =
+			
+			CALCULATE(
+			    [Sales]
+			    ,SAMEPERIODLASTYEAR('dDate'[Date])
+			)
+		formatString:= 0
+		lineageTag: 00f44e1c-64fd-46a7-8f70-1cd25a16589e
+
+	measure Today =
+			
+			TODAY()
+		formatString:= Short Date
+		lineageTag: 7b90634b-c16b-4bf1-b3b2-8f5c1f6a4b83
+
+	measure 'Sales SPPM' =
+			
+			[Sales]
+		formatString:= \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 2222f075-d63d-43e1-b318-ee9a2743c938
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Sales Cumulative' =
+			
+			CALCULATE(
+			    [Sales]
+			    ,FILTER(
+			        VALUES(dDate[Date])
+			        ,dDate[Date] <= MAX(dDate[Date])
+			    )
+			)
+		formatString:= \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: f6f0b057-cea2-400b-8648-0ca9f3afdf21
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column 'Dummy Column'
+		dataType: String
+		lineageTag: cd2a55f4-8111-4cf0-93b3-ddf136977728
+		sourceColumn: [Dummy Column]
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	annotation PBI_Id = 0f221e66ee784c8cb552d55f977bc813
+

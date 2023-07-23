@@ -1,0 +1,14 @@
+{
+  "name": "Internet Sales",
+  "mode": "import",
+  "source": {
+    "type": "m",
+    "expression": [
+      "let",
+      "    Source = Sql.Database(par_server, par_db),",
+      "    dbo_FactInternetSales = Source{[Schema=\"dbo\",Item=\"FactInternetSales\"]}[Data]",
+      "in",
+      "    dbo_FactInternetSales"
+    ]
+  }
+}

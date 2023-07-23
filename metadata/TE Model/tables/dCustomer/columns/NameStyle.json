@@ -1,0 +1,14 @@
+{
+  "name": "NameStyle",
+  "dataType": "boolean",
+  "sourceColumn": "NameStyle",
+  "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+  "lineageTag": "e4b345d8-ddfd-4675-bfc0-dcae559de339",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

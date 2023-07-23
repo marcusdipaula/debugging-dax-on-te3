@@ -1,0 +1,14 @@
+{
+  "name": "NumberChildrenAtHome",
+  "dataType": "int64",
+  "sourceColumn": "NumberChildrenAtHome",
+  "formatString": "0",
+  "lineageTag": "0a3d52ce-a159-4ed0-98b6-5899cb242415",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

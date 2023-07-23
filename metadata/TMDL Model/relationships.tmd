@@ -1,0 +1,38 @@
+relationship c6a3410b-1ec6-4fe1-9c4c-61a656472f12
+	fromColumn: dProduct.ProductSubcategoryKey
+	toColumn: 'dProduct Subcategory'.ProductSubcategoryKey
+
+	annotation PBI_IsFromSource = FS
+
+relationship fad26c51-2457-4ca9-a637-938d46e0b105
+	fromColumn: 'dProduct Subcategory'.ProductCategoryKey
+	toColumn: 'dProduct Category'.ProductCategoryKey
+
+	annotation PBI_IsFromSource = FS
+
+relationship 45b89dbc-aa54-4e45-9b82-0132af086345
+	fromColumn: 'Internet Sales'.ProductKey
+	toColumn: dProduct.ProductKey
+
+relationship 0b42b278-b437-45df-8ff1-12bf2894f492
+	fromColumn: 'Internet Sales'.CustomerKey
+	toColumn: dCustomer.CustomerKey
+
+relationship 656f3382-cdcc-443a-9615-094b7917d065
+	fromColumn: 'Internet Sales'.SalesTerritoryKey
+	toColumn: 'dSales Territory'.SalesTerritoryKey
+
+relationship 2fac824c-de2a-45b9-a9cb-b721ef33c102
+	fromColumn: 'Internet Sales'.OrderDateKey
+	toColumn: dDate.DateKey
+
+relationship 7d57360f-a64f-4fa7-ad62-7a0cc1d01da3
+	fromColumn: 'Internet Sales'.DueDateKey
+	isActive: false
+	toColumn: dDate.DateKey
+
+relationship 9a329aa8-a9e6-4094-b0d8-f8801d4804d6
+	fromColumn: 'Internet Sales'.ShipDateKey
+	isActive: false
+	toColumn: dDate.DateKey
+

@@ -1,0 +1,14 @@
+{
+  "name": "Field Parameter - Dimensions",
+  "lineageTag": "3b97ef54-80bb-4e99-a988-7b0481fc2f72",
+  "annotations": [
+    {
+      "name": "PBI_Id",
+      "value": "0639edae7de94219b1bb6ccebfcdd828"
+    },
+    {
+      "name": "TabularEditor_Relationships",
+      "value": "[]"
+    }
+  ]
+}

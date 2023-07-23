@@ -1,0 +1,14 @@
+{
+  "name": "FiscalYear",
+  "dataType": "int64",
+  "sourceColumn": "FiscalYear",
+  "formatString": "0",
+  "lineageTag": "805e9d58-15fa-41ea-95b7-37d3165d53af",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

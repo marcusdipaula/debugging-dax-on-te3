@@ -1,0 +1,14 @@
+{
+  "name": "OrderDateKey",
+  "dataType": "int64",
+  "sourceColumn": "OrderDateKey",
+  "formatString": "0",
+  "lineageTag": "4a03be0c-a560-44fc-8942-cd3dd6bdd7dc",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

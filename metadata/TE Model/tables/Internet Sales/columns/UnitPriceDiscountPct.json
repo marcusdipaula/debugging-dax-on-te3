@@ -1,0 +1,17 @@
+{
+  "name": "UnitPriceDiscountPct",
+  "dataType": "double",
+  "sourceColumn": "UnitPriceDiscountPct",
+  "lineageTag": "97080b13-34bf-4999-8544-71f82e48182e",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    },
+    {
+      "name": "PBI_FormatHint",
+      "value": "{\"isGeneralNumber\":true}"
+    }
+  ]
+}

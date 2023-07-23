@@ -1,0 +1,16 @@
+{
+  "name": "par_server",
+  "kind": "m",
+  "expression": "\".\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
+  "lineageTag": "97c8553c-c8e4-4359-928f-bd90e839cc39",
+  "annotations": [
+    {
+      "name": "PBI_NavigationStepName",
+      "value": "Navigation"
+    },
+    {
+      "name": "PBI_ResultType",
+      "value": "Text"
+    }
+  ]
+}

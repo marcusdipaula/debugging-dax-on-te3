@@ -1,0 +1,14 @@
+{
+  "name": "dSales Territory",
+  "mode": "import",
+  "source": {
+    "type": "m",
+    "expression": [
+      "let",
+      "    Source = Sql.Database(par_server, par_db),",
+      "    dbo_DimSalesTerritory = Source{[Schema=\"dbo\",Item=\"DimSalesTerritory\"]}[Data]",
+      "in",
+      "    dbo_DimSalesTerritory"
+    ]
+  }
+}

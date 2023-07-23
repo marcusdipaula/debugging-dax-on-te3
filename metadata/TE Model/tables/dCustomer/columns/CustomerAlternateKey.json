@@ -1,0 +1,13 @@
+{
+  "name": "CustomerAlternateKey",
+  "dataType": "string",
+  "sourceColumn": "CustomerAlternateKey",
+  "lineageTag": "574439b3-40d0-4f9e-8f76-034b8e8ca7fe",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

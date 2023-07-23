@@ -1,0 +1,172 @@
+table dDate
+	lineageTag: c742eec4-4882-48b1-a4f7-6a1372fb7632
+	ordinal: 2
+
+	partition dDate = M
+		mode: Import
+		expression:=
+			let
+			    Source = Sql.Database(par_server, par_db),
+			    dbo_DimDate = Source{[Schema="dbo",Item="DimDate"]}[Data],
+			    #"Renamed Columns" = Table.RenameColumns(dbo_DimDate,{{"FullDateAlternateKey", "Date"}, {"EnglishDayNameOfWeek", "DayOfWeek"}, {"EnglishMonthName", "MonthName"}}),
+			    #"Removed Columns" = Table.RemoveColumns(#"Renamed Columns",{"SpanishDayNameOfWeek", "FrenchDayNameOfWeek", "SpanishMonthName", "FrenchMonthName"})
+			in
+			    #"Removed Columns"
+
+	column DateKey
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 33e288d6-8b27-4c86-985b-8751c7c42d83
+		sourceColumn: DateKey
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: DateTime
+		formatString:= Short Date
+		isDataTypeInferred: false
+		lineageTag: d6916e94-5954-46d4-80a6-6626a575d42b
+		sourceColumn: Date
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DayNumberOfWeek
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 911e9c8d-77d8-41e1-9b9d-aba2f1735127
+		sourceColumn: DayNumberOfWeek
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfWeek
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: daf9fb5f-8b8d-41c3-8c42-5ee06ea0ac17
+		sourceColumn: DayOfWeek
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayNumberOfMonth
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: de072b06-3556-4767-bc0d-cbc2267689d6
+		sourceColumn: DayNumberOfMonth
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayNumberOfYear
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 854d4f1c-08ac-4e0f-a303-9a494708e3c6
+		sourceColumn: DayNumberOfYear
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekNumberOfYear
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 999bfb41-1d6c-4846-b1ad-3a38a28ee0e6
+		sourceColumn: WeekNumberOfYear
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthName
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: de8ebd08-b473-44da-b4e7-aaed5fede6f9
+		sortByColumn: MonthNumberOfYear
+		sourceColumn: MonthName
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+		changedProperty = SortByColumn
+
+	column MonthNumberOfYear
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 6189bef5-11ce-4772-baf0-d6e5a8dc44f2
+		sourceColumn: MonthNumberOfYear
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarQuarter
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 4bf694da-2c0f-4668-ab9e-79633b219f29
+		sourceColumn: CalendarQuarter
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarYear
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 48cf2148-f26c-4655-b1fa-81c517349746
+		sourceColumn: CalendarYear
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarSemester
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: f2bae0ef-04f6-44e6-a0bb-3a26d0f8c5ad
+		sourceColumn: CalendarSemester
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalQuarter
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: ea7cdb9f-d1ef-406e-95b5-c6e6f411d19d
+		sourceColumn: FiscalQuarter
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYear
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 805e9d58-15fa-41ea-95b7-37d3165d53af
+		sourceColumn: FiscalYear
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalSemester
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 2b61db09-0f8d-483f-bdb3-bd8f01ca634a
+		sourceColumn: FiscalSemester
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

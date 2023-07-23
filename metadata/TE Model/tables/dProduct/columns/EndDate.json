@@ -1,0 +1,14 @@
+{
+  "name": "EndDate",
+  "dataType": "dateTime",
+  "sourceColumn": "EndDate",
+  "formatString": "General Date",
+  "lineageTag": "c202648e-55b2-4007-bba7-f541fa6687a3",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

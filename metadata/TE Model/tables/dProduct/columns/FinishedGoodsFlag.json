@@ -1,0 +1,14 @@
+{
+  "name": "FinishedGoodsFlag",
+  "dataType": "boolean",
+  "sourceColumn": "FinishedGoodsFlag",
+  "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+  "lineageTag": "37ec666f-9331-47bf-bf47-d2088118d209",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

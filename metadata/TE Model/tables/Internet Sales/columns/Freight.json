@@ -1,0 +1,18 @@
+{
+  "name": "Freight",
+  "dataType": "decimal",
+  "sourceColumn": "Freight",
+  "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+  "lineageTag": "dc9ff4f6-66f3-48b4-9ac8-2571c584127e",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    },
+    {
+      "name": "PBI_FormatHint",
+      "value": "{\"currencyCulture\":\"en-US\"}"
+    }
+  ]
+}

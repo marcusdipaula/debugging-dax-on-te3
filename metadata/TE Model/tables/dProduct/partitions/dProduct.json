@@ -1,0 +1,16 @@
+{
+  "name": "dProduct",
+  "mode": "import",
+  "source": {
+    "type": "m",
+    "expression": [
+      "let",
+      "    Source = Sql.Database(par_server, par_db),",
+      "    dbo_DimProduct = Source{[Schema=\"dbo\",Item=\"DimProduct\"]}[Data],",
+      "    #\"Removed Columns\" = Table.RemoveColumns(dbo_DimProduct,{\"SpanishProductName\", \"FrenchProductName\", \"FrenchDescription\", \"ChineseDescription\", \"ArabicDescription\", \"HebrewDescription\", \"ThaiDescription\", \"GermanDescription\", \"JapaneseDescription\", \"TurkishDescription\"}),",
+      "    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Columns\",{{\"EnglishDescription\", \"Description\"}, {\"EnglishProductName\", \"Product Name\"}})",
+      "in",
+      "    #\"Renamed Columns\""
+    ]
+  }
+}

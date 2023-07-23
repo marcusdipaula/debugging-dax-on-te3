@@ -1,0 +1,16 @@
+{
+  "name": "dProduct Subcategory",
+  "mode": "import",
+  "source": {
+    "type": "m",
+    "expression": [
+      "let",
+      "    Source = Sql.Database(par_server, par_db),",
+      "    dbo_DimProductSubcategory = Source{[Schema=\"dbo\",Item=\"DimProductSubcategory\"]}[Data],",
+      "    #\"Renamed Columns\" = Table.RenameColumns(dbo_DimProductSubcategory,{{\"EnglishProductSubcategoryName\", \"Subcategory\"}}),",
+      "    #\"Removed Columns\" = Table.RemoveColumns(#\"Renamed Columns\",{\"SpanishProductSubcategoryName\", \"FrenchProductSubcategoryName\"})",
+      "in",
+      "    #\"Removed Columns\""
+    ]
+  }
+}

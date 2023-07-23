@@ -1,0 +1,13 @@
+{
+  "name": "HouseOwnerFlag",
+  "dataType": "string",
+  "sourceColumn": "HouseOwnerFlag",
+  "lineageTag": "46de24af-e987-4a15-9ac3-d0fab5e33cff",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

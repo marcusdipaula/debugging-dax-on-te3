@@ -1,0 +1,16 @@
+{
+  "name": "dDate",
+  "mode": "import",
+  "source": {
+    "type": "m",
+    "expression": [
+      "let",
+      "    Source = Sql.Database(par_server, par_db),",
+      "    dbo_DimDate = Source{[Schema=\"dbo\",Item=\"DimDate\"]}[Data],",
+      "    #\"Renamed Columns\" = Table.RenameColumns(dbo_DimDate,{{\"FullDateAlternateKey\", \"Date\"}, {\"EnglishDayNameOfWeek\", \"DayOfWeek\"}, {\"EnglishMonthName\", \"MonthName\"}}),",
+      "    #\"Removed Columns\" = Table.RemoveColumns(#\"Renamed Columns\",{\"SpanishDayNameOfWeek\", \"FrenchDayNameOfWeek\", \"SpanishMonthName\", \"FrenchMonthName\"})",
+      "in",
+      "    #\"Removed Columns\""
+    ]
+  }
+}

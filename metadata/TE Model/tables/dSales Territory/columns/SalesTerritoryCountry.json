@@ -1,0 +1,13 @@
+{
+  "name": "SalesTerritoryCountry",
+  "dataType": "string",
+  "sourceColumn": "SalesTerritoryCountry",
+  "lineageTag": "41c30897-89d4-4ad0-b9b6-a12c46a9c572",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

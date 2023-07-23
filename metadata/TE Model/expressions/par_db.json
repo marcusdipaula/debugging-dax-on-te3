@@ -1,0 +1,16 @@
+{
+  "name": "par_db",
+  "kind": "m",
+  "expression": "\"AdventureWorksDW2019\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
+  "lineageTag": "3abb7878-3e34-4b82-8403-4bcee80851ed",
+  "annotations": [
+    {
+      "name": "PBI_NavigationStepName",
+      "value": "Navigation"
+    },
+    {
+      "name": "PBI_ResultType",
+      "value": "Text"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+table 'dSales Territory'
+	lineageTag: c15d25ea-60b0-49e9-8d6c-ba43495b0cfe
+	ordinal: 3
+
+	partition 'dSales Territory' = M
+		mode: Import
+		expression:=
+			let
+			    Source = Sql.Database(par_server, par_db),
+			    dbo_DimSalesTerritory = Source{[Schema="dbo",Item="DimSalesTerritory"]}[Data]
+			in
+			    dbo_DimSalesTerritory
+
+	column SalesTerritoryKey
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 26bffa85-0d26-4d2a-a2ee-d75a3ffc288d
+		sourceColumn: SalesTerritoryKey
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesTerritoryAlternateKey
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 101b74fe-c2c7-4326-b444-e814ad17a2ce
+		sourceColumn: SalesTerritoryAlternateKey
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesTerritoryRegion
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 1c42a390-2697-46ae-b08c-6e0e3731bafe
+		sourceColumn: SalesTerritoryRegion
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesTerritoryCountry
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 41c30897-89d4-4ad0-b9b6-a12c46a9c572
+		sourceColumn: SalesTerritoryCountry
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesTerritoryGroup
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 87fa7f21-4d9b-4d48-88c4-a1d5bcd997ec
+		sourceColumn: SalesTerritoryGroup
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

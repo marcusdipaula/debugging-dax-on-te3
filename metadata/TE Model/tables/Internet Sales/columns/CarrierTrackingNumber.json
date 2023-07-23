@@ -1,0 +1,13 @@
+{
+  "name": "CarrierTrackingNumber",
+  "dataType": "string",
+  "sourceColumn": "CarrierTrackingNumber",
+  "lineageTag": "0e8f1ee5-9d39-473e-be09-94852c06bc12",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

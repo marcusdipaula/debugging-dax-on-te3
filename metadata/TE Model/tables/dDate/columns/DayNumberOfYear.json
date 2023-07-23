@@ -1,0 +1,14 @@
+{
+  "name": "DayNumberOfYear",
+  "dataType": "int64",
+  "sourceColumn": "DayNumberOfYear",
+  "formatString": "0",
+  "lineageTag": "854d4f1c-08ac-4e0f-a303-9a494708e3c6",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

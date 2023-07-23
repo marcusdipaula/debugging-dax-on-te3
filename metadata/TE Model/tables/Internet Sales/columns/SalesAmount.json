@@ -1,0 +1,18 @@
+{
+  "name": "SalesAmount",
+  "dataType": "decimal",
+  "sourceColumn": "SalesAmount",
+  "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+  "lineageTag": "8a71e6c7-5cd5-4290-b82f-e4466e98b4ec",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    },
+    {
+      "name": "PBI_FormatHint",
+      "value": "{\"currencyCulture\":\"en-US\"}"
+    }
+  ]
+}

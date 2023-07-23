@@ -1,0 +1,14 @@
+{
+  "name": "WeekNumberOfYear",
+  "dataType": "int64",
+  "sourceColumn": "WeekNumberOfYear",
+  "formatString": "0",
+  "lineageTag": "999bfb41-1d6c-4846-b1ad-3a38a28ee0e6",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

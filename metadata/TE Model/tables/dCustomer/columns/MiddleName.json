@@ -1,0 +1,13 @@
+{
+  "name": "MiddleName",
+  "dataType": "string",
+  "sourceColumn": "MiddleName",
+  "lineageTag": "2fc021e0-2420-4efc-9dc4-ac899a6364c1",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

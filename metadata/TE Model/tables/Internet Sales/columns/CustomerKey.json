@@ -1,0 +1,14 @@
+{
+  "name": "CustomerKey",
+  "dataType": "int64",
+  "sourceColumn": "CustomerKey",
+  "formatString": "0",
+  "lineageTag": "c6e4c3bf-0650-476b-8689-1b2ff874c88b",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

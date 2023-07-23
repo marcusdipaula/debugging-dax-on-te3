@@ -1,0 +1,5 @@
+culture en-US
+	linguisticMetadata:
+		content:= {"Version":"2.0.0","Language":"en-US","DynamicImprovement":"HighConfidence","Entities":{"dsales_territory.salesterritorycountry":{"Definition":{"Binding":{"ConceptualEntity":"dSales Territory","ConceptualProperty":"SalesTerritoryCountry"}},"State":"Generated","Terms":[{"Sales Country":{"State":"Suggested","Source":{"Type":"External","Agent":"PowerBI.VisualColumnRename"},"Weight":0.9}}]},"dproduct_category.englishproductcategoryname":{"Definition":{"Binding":{"ConceptualEntity":"dProduct Category","ConceptualProperty":"Category"}},"State":"Generated","Terms":[{"Category":{"State":"Suggested","Source":{"Type":"External","Agent":"PowerBI.VisualColumnRename"},"Weight":0.9}}]}}}
+		contentType: Json
+

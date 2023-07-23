@@ -1,0 +1,14 @@
+{
+  "name": "ReorderPoint",
+  "dataType": "int64",
+  "sourceColumn": "ReorderPoint",
+  "formatString": "0",
+  "lineageTag": "cfb41138-3c5c-437d-89ff-42eb4af6c8b7",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

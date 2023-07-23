@@ -1,0 +1,14 @@
+{
+  "name": "DayNumberOfMonth",
+  "dataType": "int64",
+  "sourceColumn": "DayNumberOfMonth",
+  "formatString": "0",
+  "lineageTag": "de072b06-3556-4767-bc0d-cbc2267689d6",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

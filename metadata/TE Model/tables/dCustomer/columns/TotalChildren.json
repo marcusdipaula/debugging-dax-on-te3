@@ -1,0 +1,14 @@
+{
+  "name": "TotalChildren",
+  "dataType": "int64",
+  "sourceColumn": "TotalChildren",
+  "formatString": "0",
+  "lineageTag": "fb83044e-9773-4281-9bf8-4cf8b3668fa3",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

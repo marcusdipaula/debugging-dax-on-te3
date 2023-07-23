@@ -1,0 +1,14 @@
+{
+  "name": "SafetyStockLevel",
+  "dataType": "int64",
+  "sourceColumn": "SafetyStockLevel",
+  "formatString": "0",
+  "lineageTag": "e2869eba-86b7-4262-91b2-2f337f34546f",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}
