@@ -1,0 +1,58 @@
+table 'dProduct Subcategory'
+	lineageTag: 6ba605a3-1d90-4cec-bb22-5d65493f2493
+	ordinal: 6
+
+	partition 'dProduct Subcategory' = M
+		mode: Import
+		expression:=
+			let
+			    Source = Sql.Database(par_server, par_db),
+			    dbo_DimProductSubcategory = Source{[Schema="dbo",Item="DimProductSubcategory"]}[Data],
+			    #"Renamed Columns" = Table.RenameColumns(dbo_DimProductSubcategory,{{"EnglishProductSubcategoryName", "Subcategory"}}),
+			    #"Removed Columns" = Table.RemoveColumns(#"Renamed Columns",{"SpanishProductSubcategoryName", "FrenchProductSubcategoryName"})
+			in
+			    #"Removed Columns"
+
+	column ProductSubcategoryKey
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 8f0bc376-23cf-4287-8194-e09332f0c708
+		sourceColumn: ProductSubcategoryKey
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductSubcategoryAlternateKey
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: cc8609ca-5da0-419a-8f82-2ea901d3efb4
+		sourceColumn: ProductSubcategoryAlternateKey
+		summarizeBy: Count
+
+		annotation SummarizationSetBy = Automatic
+
+	column Subcategory
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 659c6385-f026-4cbc-b321-2b338a456e48
+		sourceColumn: Subcategory
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCategoryKey
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: ab518285-2321-4daf-b13e-f6ce1e1bc95a
+		sourceColumn: ProductCategoryKey
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

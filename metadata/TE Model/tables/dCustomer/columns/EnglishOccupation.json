@@ -1,0 +1,13 @@
+{
+  "name": "EnglishOccupation",
+  "dataType": "string",
+  "sourceColumn": "EnglishOccupation",
+  "lineageTag": "4cc8c32c-f3c1-41b3-96cc-ce4bc1d16068",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

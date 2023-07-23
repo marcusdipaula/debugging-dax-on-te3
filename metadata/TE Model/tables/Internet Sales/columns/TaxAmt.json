@@ -1,0 +1,18 @@
+{
+  "name": "TaxAmt",
+  "dataType": "decimal",
+  "sourceColumn": "TaxAmt",
+  "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+  "lineageTag": "a812a5a6-081b-471b-ae24-ca77b31aa055",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    },
+    {
+      "name": "PBI_FormatHint",
+      "value": "{\"currencyCulture\":\"en-US\"}"
+    }
+  ]
+}

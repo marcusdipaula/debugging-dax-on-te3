@@ -1,0 +1,21 @@
+{
+  "name": "Sales Cumulative",
+  "expression": [
+    "",
+    "CALCULATE(",
+    "    [Sales]",
+    "    ,FILTER(",
+    "        VALUES(dDate[Date])",
+    "        ,dDate[Date] <= MAX(dDate[Date])",
+    "    )",
+    ")"
+  ],
+  "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+  "lineageTag": "f6f0b057-cea2-400b-8648-0ca9f3afdf21",
+  "annotations": [
+    {
+      "name": "PBI_FormatHint",
+      "value": "{\"currencyCulture\":\"en-US\"}"
+    }
+  ]
+}

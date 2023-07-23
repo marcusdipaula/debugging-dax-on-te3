@@ -1,0 +1,13 @@
+{
+  "name": "SizeRange",
+  "dataType": "string",
+  "sourceColumn": "SizeRange",
+  "lineageTag": "ed8558e2-018d-4a26-9e8c-e96f5a88fcfe",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

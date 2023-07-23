@@ -1,0 +1,258 @@
+table dCustomer
+	lineageTag: f0aeb44e-4f50-4077-9fd2-8a2797fc38af
+	ordinal: 4
+
+	partition dCustomer = M
+		mode: Import
+		expression:=
+			let
+			    Source = Sql.Database(par_server, par_db),
+			    dbo_DimCustomer = Source{[Schema="dbo",Item="DimCustomer"]}[Data],
+			    #"Removed Columns" = Table.RemoveColumns(dbo_DimCustomer,{"SpanishEducation", "FrenchEducation", "SpanishOccupation", "FrenchOccupation"})
+			in
+			    #"Removed Columns"
+
+	column CustomerKey
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: fae02380-adab-4883-a4c0-2518236f8a1c
+		sourceColumn: CustomerKey
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column GeographyKey
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 9213de85-40d3-4892-afe3-e3ab8e8fadc1
+		sourceColumn: GeographyKey
+		summarizeBy: Count
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerAlternateKey
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 574439b3-40d0-4f9e-8f76-034b8e8ca7fe
+		sourceColumn: CustomerAlternateKey
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 11bdc5c2-4849-431f-bb67-e8d3106d900f
+		sourceColumn: Title
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column FirstName
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 171c02eb-4dc1-4269-aefc-904b0385f865
+		sourceColumn: FirstName
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column MiddleName
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 2fc021e0-2420-4efc-9dc4-ac899a6364c1
+		sourceColumn: MiddleName
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastName
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: f95a5e83-ac7c-4bce-b1f6-91c970176a43
+		sourceColumn: LastName
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column NameStyle
+		dataType: Boolean
+		formatString:= "TRUE";"TRUE";"FALSE"
+		isDataTypeInferred: false
+		lineageTag: e4b345d8-ddfd-4675-bfc0-dcae559de339
+		sourceColumn: NameStyle
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column BirthDate
+		dataType: DateTime
+		formatString:= Long Date
+		isDataTypeInferred: false
+		lineageTag: 67e75327-3c84-4f91-bdf9-a55595b38463
+		sourceColumn: BirthDate
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column MaritalStatus
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: fe5bd028-2179-4cdc-8a2f-db7593b92c42
+		sourceColumn: MaritalStatus
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column Suffix
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: ae5a405e-d6e3-49ad-8717-bb2b4335bd36
+		sourceColumn: Suffix
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: b85c2500-71f5-425c-afe4-e8276d979e51
+		sourceColumn: Gender
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmailAddress
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: fb5b9445-fe74-4484-b3b2-7cf0b0dcf993
+		sourceColumn: EmailAddress
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearlyIncome
+		dataType: Decimal
+		formatString:= \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		isDataTypeInferred: false
+		lineageTag: eea7fbe8-a815-4c4f-ad0a-60d00aa1c066
+		sourceColumn: YearlyIncome
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column TotalChildren
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: fb83044e-9773-4281-9bf8-4cf8b3668fa3
+		sourceColumn: TotalChildren
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberChildrenAtHome
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 0a3d52ce-a159-4ed0-98b6-5899cb242415
+		sourceColumn: NumberChildrenAtHome
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishEducation
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 27e4e1c1-b986-4cb9-a72b-a7e46927d2c5
+		sourceColumn: EnglishEducation
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishOccupation
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 4cc8c32c-f3c1-41b3-96cc-ce4bc1d16068
+		sourceColumn: EnglishOccupation
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column HouseOwnerFlag
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 46de24af-e987-4a15-9ac3-d0fab5e33cff
+		sourceColumn: HouseOwnerFlag
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberCarsOwned
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 6a5ae610-f2e0-4baf-9c78-77f923022aa4
+		sourceColumn: NumberCarsOwned
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressLine1
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: c0335d07-667f-42db-97f8-7fa81081f085
+		sourceColumn: AddressLine1
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressLine2
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 63f10c7c-6440-4ade-9f8d-bc0be5b0e04b
+		sourceColumn: AddressLine2
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phone
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: ba42f768-7f8c-4f7c-88c3-53392079614d
+		sourceColumn: Phone
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateFirstPurchase
+		dataType: DateTime
+		formatString:= Long Date
+		isDataTypeInferred: false
+		lineageTag: 15a1226c-5743-46c7-9e3c-9204e66248da
+		sourceColumn: DateFirstPurchase
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CommuteDistance
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 9c7b17f6-2278-4292-a312-d2ffc8abbdfe
+		sourceColumn: CommuteDistance
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

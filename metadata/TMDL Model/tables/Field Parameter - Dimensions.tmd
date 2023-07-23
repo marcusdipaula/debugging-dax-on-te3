@@ -1,0 +1,65 @@
+table 'Field Parameter - Dimensions'
+	lineageTag: 3b97ef54-80bb-4e99-a988-7b0481fc2f72
+	ordinal: 9
+
+	partition 'Field Parameter - Dimensions' = Calculated
+		mode: Import
+		expression:=
+			{
+			    ("Category",        NAMEOF('dProduct Category'[Category]),        0,      "Product"),
+			    ("Subcategory",     NAMEOF('dProduct Subcategory'[Subcategory]),  1,      "Product"),
+			    ("Product",         NAMEOF('dProduct'[Product Name]),                         2,      "Product"),
+			    ("Sales Country",   NAMEOF('dSales Territory'[SalesTerritoryCountry]),              3,      "Geography"),
+			    ("Month Name",      NAMEOF('dDate'[MonthName]),                                     4,      "Calendar"),
+			    ("Month Number",    NAMEOF('dDate'[MonthNumberOfYear]),                             5,      "Calendar")
+			}
+
+	column Parameter
+		dataType: String
+		isNameInferred: false
+		lineageTag: d4218a7f-ca23-4288-9b44-b2fd0e13d500
+		relatedColumnDetails:
+			groupByColumns:
+			- groupingColumn: 'Parameter Fields'
+		sortByColumn: 'Parameter Order'
+		sourceColumn: [Value1]
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parameter Fields'
+		dataType: String
+		isHidden
+		isNameInferred: false
+		lineageTag: 662a8f24-00a0-43ee-86d1-a0ef04ab8390
+		sortByColumn: 'Parameter Order'
+		sourceColumn: [Value2]
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+		extendedProperty ParameterMetadata = {"version":3,"kind":2}
+
+	column 'Parameter Order'
+		dataType: Int64
+		formatString:= 0
+		isHidden
+		isNameInferred: false
+		lineageTag: 1dea7667-530d-4d4e-991a-f0899232ab73
+		sourceColumn: [Value3]
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: String
+		isHidden
+		isNameInferred: false
+		lineageTag: 20840eae-6800-48a0-893f-0e9c2e88a4ca
+		sourceColumn: [Value4]
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	annotation PBI_Id = 0639edae7de94219b1bb6ccebfcdd828
+

@@ -1,0 +1,14 @@
+{
+  "name": "DayNumberOfWeek",
+  "dataType": "int64",
+  "sourceColumn": "DayNumberOfWeek",
+  "formatString": "0",
+  "lineageTag": "911e9c8d-77d8-41e1-9b9d-aba2f1735127",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

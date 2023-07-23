@@ -1,0 +1,14 @@
+{
+  "name": "FiscalQuarter",
+  "dataType": "int64",
+  "sourceColumn": "FiscalQuarter",
+  "formatString": "0",
+  "lineageTag": "ea7cdb9f-d1ef-406e-95b5-c6e6f411d19d",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

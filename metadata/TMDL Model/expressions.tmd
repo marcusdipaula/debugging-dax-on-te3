@@ -1,0 +1,14 @@
+expression par_server = "." meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 97c8553c-c8e4-4359-928f-bd90e839cc39
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
+expression par_db = "AdventureWorksDW2019" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 3abb7878-3e34-4b82-8403-4bcee80851ed
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+

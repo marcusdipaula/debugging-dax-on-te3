@@ -1,0 +1,13 @@
+{
+  "name": "DayOfWeek",
+  "dataType": "string",
+  "sourceColumn": "DayOfWeek",
+  "lineageTag": "daf9fb5f-8b8d-41c3-8c42-5ee06ea0ac17",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

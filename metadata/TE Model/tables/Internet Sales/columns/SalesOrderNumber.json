@@ -1,0 +1,13 @@
+{
+  "name": "SalesOrderNumber",
+  "dataType": "string",
+  "sourceColumn": "SalesOrderNumber",
+  "lineageTag": "712f4038-219a-4919-bed6-183b656dc406",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

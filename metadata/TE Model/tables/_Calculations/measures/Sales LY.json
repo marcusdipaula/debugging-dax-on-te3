@@ -1,0 +1,12 @@
+{
+  "name": "Sales LY",
+  "expression": [
+    "",
+    "CALCULATE(",
+    "    [Sales]",
+    "    ,SAMEPERIODLASTYEAR('dDate'[Date])",
+    ")"
+  ],
+  "formatString": "0",
+  "lineageTag": "00f44e1c-64fd-46a7-8f70-1cd25a16589e"
+}

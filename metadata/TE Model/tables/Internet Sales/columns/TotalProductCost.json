@@ -1,0 +1,18 @@
+{
+  "name": "TotalProductCost",
+  "dataType": "decimal",
+  "sourceColumn": "TotalProductCost",
+  "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+  "lineageTag": "b166b71a-2bf0-48f7-a387-e7e88c77cdc3",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    },
+    {
+      "name": "PBI_FormatHint",
+      "value": "{\"currencyCulture\":\"en-US\"}"
+    }
+  ]
+}

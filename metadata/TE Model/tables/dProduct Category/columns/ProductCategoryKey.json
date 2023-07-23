@@ -1,0 +1,14 @@
+{
+  "name": "ProductCategoryKey",
+  "dataType": "int64",
+  "sourceColumn": "ProductCategoryKey",
+  "formatString": "0",
+  "lineageTag": "3242ef27-d3ef-453c-9e5d-57b7b76ca91b",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

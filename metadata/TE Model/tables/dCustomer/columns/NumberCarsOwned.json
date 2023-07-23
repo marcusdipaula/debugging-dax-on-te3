@@ -1,0 +1,14 @@
+{
+  "name": "NumberCarsOwned",
+  "dataType": "int64",
+  "sourceColumn": "NumberCarsOwned",
+  "formatString": "0",
+  "lineageTag": "6a5ae610-f2e0-4baf-9c78-77f923022aa4",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

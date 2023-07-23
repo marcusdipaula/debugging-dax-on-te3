@@ -1,0 +1,24 @@
+{
+  "type": "calculatedTableColumn",
+  "name": "Parameter",
+  "dataType": "string",
+  "isNameInferred": false,
+  "isDataTypeInferred": true,
+  "sourceColumn": "[Value1]",
+  "sortByColumn": "Parameter Order",
+  "lineageTag": "d4218a7f-ca23-4288-9b44-b2fd0e13d500",
+  "summarizeBy": "none",
+  "relatedColumnDetails": {
+    "groupByColumns": [
+      {
+        "groupingColumn": "Parameter Fields"
+      }
+    ]
+  },
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

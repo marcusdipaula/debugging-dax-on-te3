@@ -1,0 +1,14 @@
+{
+  "name": "OrderDate",
+  "dataType": "dateTime",
+  "sourceColumn": "OrderDate",
+  "formatString": "General Date",
+  "lineageTag": "5a5ea21c-0d89-4e34-a07c-b040d060f6b7",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

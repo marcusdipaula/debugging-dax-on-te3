@@ -1,0 +1,18 @@
+{
+  "name": "ExtendedAmount",
+  "dataType": "decimal",
+  "sourceColumn": "ExtendedAmount",
+  "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+  "lineageTag": "e2c94025-319a-43d5-80fc-0a3c41964a37",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    },
+    {
+      "name": "PBI_FormatHint",
+      "value": "{\"currencyCulture\":\"en-US\"}"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Sales",
+  "expression": [
+    "",
+    "SUMX(",
+    "    'Internet Sales'",
+    "    ,[UnitPrice] * [OrderQuantity]",
+    ")"
+  ],
+  "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+  "lineageTag": "30d5e165-62ab-4057-a01f-c5df75d18eac",
+  "annotations": [
+    {
+      "name": "PBI_FormatHint",
+      "value": "{\"currencyCulture\":\"en-US\"}"
+    }
+  ]
+}

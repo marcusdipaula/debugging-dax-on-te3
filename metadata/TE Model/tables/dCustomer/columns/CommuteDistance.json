@@ -1,0 +1,13 @@
+{
+  "name": "CommuteDistance",
+  "dataType": "string",
+  "sourceColumn": "CommuteDistance",
+  "lineageTag": "9c7b17f6-2278-4292-a312-d2ffc8abbdfe",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

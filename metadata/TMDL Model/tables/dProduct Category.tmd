@@ -1,0 +1,48 @@
+table 'dProduct Category'
+	lineageTag: 3ddcffdf-d651-4021-b2cc-99e0b3857cfa
+	ordinal: 7
+
+	partition 'dProduct Category' = M
+		mode: Import
+		expression:=
+			let
+			    Source = Sql.Database(par_server, par_db),
+			    dbo_DimProductCategory = Source{[Schema="dbo",Item="DimProductCategory"]}[Data],
+			    #"Renamed Columns" = Table.RenameColumns(dbo_DimProductCategory,{{"EnglishProductCategoryName", "Category"}}),
+			    #"Removed Columns" = Table.RemoveColumns(#"Renamed Columns",{"SpanishProductCategoryName", "FrenchProductCategoryName"})
+			in
+			    #"Removed Columns"
+
+	column ProductCategoryKey
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 3242ef27-d3ef-453c-9e5d-57b7b76ca91b
+		sourceColumn: ProductCategoryKey
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCategoryAlternateKey
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 2c194ac5-2b37-426b-8620-113c5629b348
+		sourceColumn: ProductCategoryAlternateKey
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: b14a0248-2e67-4953-a696-5373c1519252
+		sourceColumn: Category
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

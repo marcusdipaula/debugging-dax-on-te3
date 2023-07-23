@@ -1,0 +1,14 @@
+{
+  "name": "RevisionNumber",
+  "dataType": "int64",
+  "sourceColumn": "RevisionNumber",
+  "formatString": "0",
+  "lineageTag": "a948076a-36f4-4e43-b693-42773974474d",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

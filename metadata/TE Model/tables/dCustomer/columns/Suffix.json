@@ -1,0 +1,13 @@
+{
+  "name": "Suffix",
+  "dataType": "string",
+  "sourceColumn": "Suffix",
+  "lineageTag": "ae5a405e-d6e3-49ad-8717-bb2b4335bd36",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

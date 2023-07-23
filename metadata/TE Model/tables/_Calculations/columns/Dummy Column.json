@@ -1,0 +1,16 @@
+{
+  "type": "calculatedTableColumn",
+  "name": "Dummy Column",
+  "dataType": "string",
+  "isNameInferred": true,
+  "isDataTypeInferred": true,
+  "sourceColumn": "[Dummy Column]",
+  "lineageTag": "cd2a55f4-8111-4cf0-93b3-ddf136977728",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

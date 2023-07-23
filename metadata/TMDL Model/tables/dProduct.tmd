@@ -1,0 +1,263 @@
+table dProduct
+	lineageTag: f7890668-a58d-4f0a-ac22-c45f69bc16ac
+	ordinal: 5
+
+	partition dProduct = M
+		mode: Import
+		expression:=
+			let
+			    Source = Sql.Database(par_server, par_db),
+			    dbo_DimProduct = Source{[Schema="dbo",Item="DimProduct"]}[Data],
+			    #"Removed Columns" = Table.RemoveColumns(dbo_DimProduct,{"SpanishProductName", "FrenchProductName", "FrenchDescription", "ChineseDescription", "ArabicDescription", "HebrewDescription", "ThaiDescription", "GermanDescription", "JapaneseDescription", "TurkishDescription"}),
+			    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"EnglishDescription", "Description"}, {"EnglishProductName", "Product Name"}})
+			in
+			    #"Renamed Columns"
+
+	column ProductKey
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 481fec74-258b-4aab-892b-d9de412b57bb
+		sourceColumn: ProductKey
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductAlternateKey
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 2b8afa31-bd62-492e-8127-fc62de0aaf38
+		sourceColumn: ProductAlternateKey
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductSubcategoryKey
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: fde3e940-7c03-488f-a486-e01cea29ad6e
+		sourceColumn: ProductSubcategoryKey
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeightUnitMeasureCode
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 8fb37e69-2db1-4989-bc83-a0fb44dcae84
+		sourceColumn: WeightUnitMeasureCode
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column SizeUnitMeasureCode
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 9be74e10-bd76-45ac-8f9e-076c289e30a8
+		sourceColumn: SizeUnitMeasureCode
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Name'
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 05114bd3-99cd-4a72-ab7d-893762de20f2
+		sourceColumn: Product Name
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column StandardCost
+		dataType: Decimal
+		formatString:= \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		isDataTypeInferred: false
+		lineageTag: 535a289a-bd48-4f1f-90ec-e080d678ad63
+		sourceColumn: StandardCost
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column FinishedGoodsFlag
+		dataType: Boolean
+		formatString:= "TRUE";"TRUE";"FALSE"
+		isDataTypeInferred: false
+		lineageTag: 37ec666f-9331-47bf-bf47-d2088118d209
+		sourceColumn: FinishedGoodsFlag
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column Color
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: b3664c53-f495-46a0-85cd-dc3cf437ff70
+		sourceColumn: Color
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column SafetyStockLevel
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: e2869eba-86b7-4262-91b2-2f337f34546f
+		sourceColumn: SafetyStockLevel
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReorderPoint
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: cfb41138-3c5c-437d-89ff-42eb4af6c8b7
+		sourceColumn: ReorderPoint
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column ListPrice
+		dataType: Decimal
+		formatString:= \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		isDataTypeInferred: false
+		lineageTag: 33cba14a-c0c8-45b1-b2c3-dea27d39fa2d
+		sourceColumn: ListPrice
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column Size
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: f3e6487d-ba7c-44dc-8992-0662083ba639
+		sourceColumn: Size
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column SizeRange
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: ed8558e2-018d-4a26-9e8c-e96f5a88fcfe
+		sourceColumn: SizeRange
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weight
+		dataType: Double
+		isDataTypeInferred: false
+		lineageTag: 7bfdcf32-1346-4b69-935c-3e8e663505b4
+		sourceColumn: Weight
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DaysToManufacture
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 2854b20b-1ae7-4099-a159-82a9aed368be
+		sourceColumn: DaysToManufacture
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductLine
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: b28e0061-4b3d-4610-9cad-509bcd06a2d0
+		sourceColumn: ProductLine
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column DealerPrice
+		dataType: Decimal
+		formatString:= \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		isDataTypeInferred: false
+		lineageTag: 82cf54a6-fac0-4b4e-8350-711d3c15b9e8
+		sourceColumn: DealerPrice
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column Class
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 7742a822-3461-4d37-8d84-2fa536da5658
+		sourceColumn: Class
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column Style
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 61a8849a-0c87-45bc-8125-035caf792948
+		sourceColumn: Style
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModelName
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 36bf55fa-438d-4e67-b40f-ffc396ff7e53
+		sourceColumn: ModelName
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 24ff50b8-3915-4d5d-b07f-03c5e15b5a51
+		sourceColumn: Description
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column StartDate
+		dataType: DateTime
+		formatString:= General Date
+		isDataTypeInferred: false
+		lineageTag: af71b3c7-e8f2-436c-9e3c-53a35656b83b
+		sourceColumn: StartDate
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column EndDate
+		dataType: DateTime
+		formatString:= General Date
+		isDataTypeInferred: false
+		lineageTag: c202648e-55b2-4007-bba7-f541fa6687a3
+		sourceColumn: EndDate
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 35ddb44a-bef3-42e0-8a46-3596af5daf99
+		sourceColumn: Status
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

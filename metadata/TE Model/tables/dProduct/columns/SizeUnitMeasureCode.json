@@ -1,0 +1,13 @@
+{
+  "name": "SizeUnitMeasureCode",
+  "dataType": "string",
+  "sourceColumn": "SizeUnitMeasureCode",
+  "lineageTag": "9be74e10-bd76-45ac-8f9e-076c289e30a8",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

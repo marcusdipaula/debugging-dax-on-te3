@@ -1,0 +1,17 @@
+{
+  "name": "Field Parameter - Dimensions",
+  "mode": "import",
+  "source": {
+    "type": "calculated",
+    "expression": [
+      "{",
+      "    (\"Category\",        NAMEOF('dProduct Category'[Category]),        0,      \"Product\"),",
+      "    (\"Subcategory\",     NAMEOF('dProduct Subcategory'[Subcategory]),  1,      \"Product\"),",
+      "    (\"Product\",         NAMEOF('dProduct'[Product Name]),                         2,      \"Product\"),",
+      "    (\"Sales Country\",   NAMEOF('dSales Territory'[SalesTerritoryCountry]),              3,      \"Geography\"),",
+      "    (\"Month Name\",      NAMEOF('dDate'[MonthName]),                                     4,      \"Calendar\"),",
+      "    (\"Month Number\",    NAMEOF('dDate'[MonthNumberOfYear]),                             5,      \"Calendar\")",
+      "}"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "SalesTerritoryRegion",
+  "dataType": "string",
+  "sourceColumn": "SalesTerritoryRegion",
+  "lineageTag": "1c42a390-2697-46ae-b08c-6e0e3731bafe",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

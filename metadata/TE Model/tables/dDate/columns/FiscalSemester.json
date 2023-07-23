@@ -1,0 +1,14 @@
+{
+  "name": "FiscalSemester",
+  "dataType": "int64",
+  "sourceColumn": "FiscalSemester",
+  "formatString": "0",
+  "lineageTag": "2b61db09-0f8d-483f-bdb3-bd8f01ca634a",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}
