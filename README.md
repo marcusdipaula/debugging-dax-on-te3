@@ -29,11 +29,14 @@ O seguinte mapa mental traz os tópicos abordados no treinamento:
 
 ![](./images/MindMap.png)
 
+![](./images/map.png)
+Source: <https://tabulareditor.com/learn>
 
 ## Resources
 
 Esta seção contém links de recursos usados no treinamento, que não foram citados no corpo deste README, e outros sugeridos para expansão do conhecimento.
 - https://tabulareditor.com/
+- https://tabulareditor.com/learn 
 - https://docs.tabulareditor.com/te3/features/dax-debugger
 - https://daxstudio.org/
 - https://dax.guide/
